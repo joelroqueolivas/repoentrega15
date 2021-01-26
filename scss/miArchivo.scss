@@ -1,0 +1,356 @@
+main {
+  display: grid;
+  margin: 0px;
+  min-width: 100%;
+  min-height: 100vh;
+  grid-column-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25px auto auto 1fr auto; 
+  grid-template-areas: 
+     "sup sup sup sup"
+     "menu menu menu menu"
+     "carga carga carga carga"
+     "contenido contenido contenido contenido"
+     "pie pie pie pie"
+}
+header{
+  display: flex;
+  justify-content: space-between;
+   flex-wrap: nowrap;
+  grid-area: sup; 
+  background-color: #93f;
+}
+nav{
+  display: flex;
+  grid-area: menu; 
+}
+aside{
+  display: flex;
+  grid-area: carga; 
+  background-color: #FFFFFF;
+}
+section {
+  display: block;
+  grid-area: contenido; 
+}
+footer {
+  display: flex;
+  grid-area: pie;
+  background-color: #f6f6f9; 
+}
+
+/*estilos contenido*/
+.barraSuperior{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.barraSuperior:nth-child(3) a{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.barraSuperior:nth-child(3) i{
+ color: #000000;
+}
+.barraSuperior:nth-child(6) p{
+  margin-left: 1px;
+  margin-right: 10px;
+}
+/*estilos ruta*/
+
+div .ruta{
+  display: flex;
+}
+.ruta{
+  display: flex;
+  justify-content: space-around;
+}
+.ruta ul li{
+  display: inline;
+}
+.ruta ul li a{
+  color: #B31694;
+  text-decoration-line: none;
+}
+.padreCinco__hijo_1 ul li a{
+  color: #9C9C9C;
+  text-decoration-line: none;
+}
+// estilos footer
+footer div.padreCinco__hijo_1 h1{
+  color: #6C6A6A;
+}
+footer div.padreCinco__hijo_3 h2{
+  color: #6C6A6A;
+}
+footer div.padreCinco__hijo_3 p{
+  color: #9C9C9C;
+}
+footer div.padreCinco__hijo_4 h1{
+  color: #6C6A6A;
+}
+footer div.padreCinco__hijo_4 label{
+  color: #9C9C9C;
+}
+
+/*estilos barra de carga*/
+.barra_carga{
+  display: flex;
+  width: auto;
+  height: 10px;
+  background-color: #cc7bff;
+  animation-name: un_efecto; 
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-delay: 0s;
+
+}
+
+@keyframes un_efecto {
+   0%{ width: 100px; background-color: #F3C9E8;}
+   15%{ width: 300px; }
+   25%{ width: 500px; }
+   50%{ width: 900px;
+     background-color: #EE10EB; }
+   75%{ width: 1000px;}
+   100%{ width: 1500px;
+     background-color:#F128CE;}
+}
+/*estilos padre uno*/
+ .padreUno{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ }
+ .padreUno__hijo_1{
+  background-image: url(../imagenes/imagen13.png);
+  background-repeat: no-repeat;
+  background-position: 0px 20px;
+  background-size: cover;
+ }
+.padreUno__hijo_2{
+  width: 70%;
+  height: 100%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: solid 2px black;
+  border-radius: 20px;
+ }
+
+ .padreDos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ }
+
+ .padreTres{
+  display: flex;
+  margin-left: 100px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.padreCuatro{
+  background-image: url(../imagenes/imagen06.jpg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  height: 500px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.padreCuatro__hijo_1{
+   width: 50%;
+}
+.padreCuatro__hijo_2{
+ 
+  width: 50%;
+}
+
+/*estilos footer*/
+
+.padreCinco{
+  width: 100%;
+  padding: 50px;
+  display: flex;
+   justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+/*estilos quienes somos*/
+.padreOcho{
+  background-image: url(../imagenes/imagen06.jpg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  height: 500px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.padreOcho__hijo_1{
+   width: 50%;
+}
+.padreOcho__hijo_2{
+ 
+  width: 50%;
+}
+.padreOcho h2{
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+.padreOcho__hijo_2 h3{
+    color: #FFFFFF;
+  font-size: 50px;
+}
+
+.padreOcho__hijo_2 p {
+    color: #FFFFFF;
+  font-size: 15px;
+}
+
+.padreOcho__hijo_2 .container a {
+    color: #FFFFFF;
+  font-size: 15px;
+}
+/*tablas quienes somos*/
+.padreTablas{
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+.padreTablas h2{
+  text-align: center;
+}
+/*eanimaciones quienes somos*/
+div .animacion{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+@keyframes example {
+  0%   {background-color:#ED0FDB; left:0px; top:0px;}
+  25%  {background-color:#900EE3; left:200px; top:0px;}
+  50%  {background-color:#9B68CF; left:200px; top:200px;}
+  75%  {background-color:#FCFF00; left:0px; top:200px;}
+  100% {background-color:#00DEFF; left:0px; top:0px;}
+}
+.padreOcho__hijo_2 .animacion p{
+  font-weight: 500;
+  font-size: 20px;
+   padding: 40px;
+}
+
+div .animacion p{
+  color: rgba(0, 0, 0, 0);
+  animation-name: exampleDos;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+@keyframes exampleDos {
+  0%   {color:#093; left:0px; top:0px;}
+  25%  {color:#00c; left:200px; top:0px;}
+  50%  {color:#ff5050; left:200px; top:200px;}
+  75%  {color:black; left:0px; top:200px;}
+  100% {color:white; left:0px; top:0px;}
+}
+/*estilos diplomados*/
+.padreNueve{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+// estilo carrusel
+.carousel h5{
+  font-size: 50px;
+  color: #FFFFFF;
+}
+.carousel p{
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+// padreCuatro estilos
+.padreCuatro__hijo_1 h2,h3{
+  font-size: 50px;
+  color: #FFFFFF;
+}
+.padreCuatro__hijo_2 p{
+  font-size: 20px;
+  color: #FFFFFF;
+}
+// color barra menu
+.bg-dark {
+    background-color: #FFFFFF!important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #000000;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #030000;
+}
+
+.navbar-dark .navbar-toggler {
+    color:#000000;
+    border-color: #000000;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #8B1E95;
+}
+
+// Each ejercicio sass 1
+.padreTres{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+@each $imagen in baner01, baner02, baner03, baner04 {
+   .#{$imagen}{ 
+        background-image:  
+        url('../imagenes/#{$imagen}.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 50px;
+        width: 300px;
+        height: 400px;
+    }
+} 
+// ejercicio sass 2
+.padreSassUno{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+$ancho: 950px;
+$img:url(../imagenes/imagen13.png);;
+$green: white;
+
+.padreSassUno__hijo1{
+        background-image: $img;
+        background-repeat: no-repeat;
+        background-position: 0px 20px;
+        background-size: cover;
+          width: $ancho/2;
+          height: $ancho/2;
+}
+.padreSassUno__hijo2{
+            background-color: $green;
+             width: ($ancho/2);
+             height: $ancho/2;
+}
+
